@@ -12,3 +12,5 @@ export class BoardComponent {
 
   @Input() boardState: FieldValue[][] = [];
 }
+
+
