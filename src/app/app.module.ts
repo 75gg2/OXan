@@ -6,6 +6,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { GameComponent } from './game/game.component';
 import { BoardComponent } from './board/board.component';
 import { SquareComponent } from './square/square.component';
+import { EndingComponent } from './ending/ending.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { SquareComponent } from './square/square.component';
     LandingPageComponent,
     GameComponent,
     BoardComponent,
-    SquareComponent
+    SquareComponent,
+    EndingComponent
   ],
   imports: [
     BrowserModule

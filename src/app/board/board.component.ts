@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {FieldValue} from "../data";
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {BoardScheme, FieldValue} from "../data";
 
 @Component({
   selector: 'app-board',
@@ -7,10 +7,13 @@ import {FieldValue} from "../data";
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent {
+
+  @Output() handleMove = new EventEmitter()
   @Input('n') n: number = 0;
+  @Input() points: {x:number,o:number} = {x:0, o:0};
   @Input('m') m: number = 0;
 
-  @Input() boardState: FieldValue[][] = [];
+  @Input() boardState: BoardScheme = [];
 }
 
 

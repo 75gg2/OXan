@@ -9,9 +9,14 @@ import {StartGame} from "../data";
 export class LandingPageComponent {
 
   @Output() handleSubmit = new EventEmitter();
-  submit(props:StartGame){
+  submit(props: { m:string,n:string,p:string }){
+    let gameProps:StartGame = {
+      m:parseInt(props.m),
+      n:parseInt(props.n),
+      p:parseInt(props.p)
+    }
     //todo validation
-    this.handleSubmit.emit(props)
+    this.handleSubmit.emit(gameProps)
   }
 
 }

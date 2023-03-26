@@ -12,9 +12,13 @@ export class AppComponent {
   page = "landing"
   gameProps: StartGame = startGameDefaults;
 
-
+  message=""
   startGame(props: StartGame) {
     this.gameProps = props
     this.page = 'game'
+  }
+  endGame(props:{message: string}){
+    this.page = "end"
+    this.message = props.message
   }
 }

@@ -1,7 +1,7 @@
-<div>
-  <label>Punkty: <input #points> </label>
-  <label>N: <input #inN> </label>
-  <label>M: <input #inM> </label>
+<div [ngStyle]="{'margin': 'auto', 'text-align':'center'}"><br/><br/><br/><br/>
+  <label>Punkty: <input #points type="number" min="1" [defaultValue]="3"> </label><br/><br/>
+  <label>N: <input #inN type="number" min="5" [defaultValue]="7"> </label><br/><br/>
+  <label>M: <input #inM type="number" min="5" [defaultValue]="7"> </label><br/><br/>
 
-      <button (click)="">Dalej</button>
+      <button (click)="submit({m: inM.value ,n:  inN.value,p: points.value})">Dalej</button>
 </div>
